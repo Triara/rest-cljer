@@ -1,6 +1,5 @@
 (ns rest-cljer.core
-  (:require [midje.sweet :refer :all]
-            [environ.core :refer [env]]
+  (:require [environ.core :refer [env]]
             [clojure.data :refer [diff]]
             [clojure.data.json :refer [read-str json-str]]
             [clojure.java.io :refer [input-stream]])
@@ -122,7 +121,5 @@
                 (add-times expectation# (:times response#)))))
 
           ~@body
-
-          (try (.verify driver#) (catch Exception e# (fact e# => nil)))
 
           (finally (.shutdownQuietly driver#))))))
