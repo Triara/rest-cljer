@@ -4,10 +4,9 @@
             [clojure.data :refer [diff]]
             [clojure.data.json :refer [read-str json-str]]
             [clojure.java.io :refer [input-stream]])
-  (:import [com.github.restdriver.clientdriver ClientDriverFactory ClientDriverRule]
+  (:import [com.github.restdriver.clientdriver ClientDriverFactory]
            [com.github.restdriver.clientdriver RestClientDriver ClientDriverRequest$Method]
-           [java.io InputStream]
-           [org.hamcrest Matcher]))
+           [java.io InputStream]))
 
 (def verbs
   {:GET     (ClientDriverRequest$Method/GET)
