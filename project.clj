@@ -8,7 +8,7 @@
                  [environ "0.3.0"]
                  [junit "4.11"]
                  [clj-http "0.5.2"]
-                 [midje "1.5.1"]
+                 [midje "1.6.3"]
                  [org.clojure/data.json "0.2.1"]
                  [com.github.rest-driver/rest-client-driver "1.1.42" :exclusions [org.slf4j/slf4j-nop]]]
 
@@ -16,4 +16,5 @@
 
   :profiles {:dev {:plugins [[lein-rpm "0.0.4"]
                              [lein-midje "3.1.0"]
-		             [lein-release "1.0.5"]]}})
+                             [lein-release "1.0.5"]]}
+                   :dependencies [lein-midje "3.1.0"]})
